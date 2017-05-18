@@ -2,9 +2,12 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
 	<title>mmenu</title>
-	<link rel="stylesheet" type="text/css" href="css/jquery.mmenu.css">
-	<link rel="stylesheet" type="text/css" href="js/jquery.mmenu.min.js">
+	<link rel="stylesheet" type="text/css" href="css/jquery.mmenu.all.css">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-2.2.0.js"></script>	
+	<script type="text/javascript" src="js/jquery.mmenu.all.min.js"></script>
+
 </head>
 <body>
 	<div class="container">
@@ -33,16 +36,9 @@
 	</div>
 
 <script type="text/javascript">
-	$(document).ready(function(){
-		$('#mymenu').mmenu();
-		$('#open').click(function(){
-			$('#mymenu').trigger("open.mm");
-		});
-		$('#close').click(function(){
-			$('#mymenu').trigger("close.mm");
-		});
-
-	});
+	$(function() {
+				$('nav#mymenu').mmenu();
+			});
 </script>
 </body>
 </html>
