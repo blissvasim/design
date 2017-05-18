@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>mmenu</title>
+	<link rel="stylesheet" type="text/css" href="css/jquery.mmenu.css">
+	<link rel="stylesheet" type="text/css" href="js/jquery.mmenu.min.js">
+</head>
+<body>
+	<div class="container">
+		<nav id="mymenu">
+			<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="#">About</a>
+			<ul>
+				<li><a href="#">Company Profile</a></li>
+				<li><a href="#">Team Profile</a></li>
+				<li><a href="#">Clients</a></li>
+			</ul>
+			</li>
+
+			<li><a href="#">Contact</a></li>
+			
+		</ul>
+
+		</nav>
+		<div><a href="#mymenu">open menu link</a>
+		<button id="open">Open manually</button>
+		<br>
+		<button id="close">Close manually</button>
+
+		</div>
+	</div>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#mymenu').mmenu();
+		$('#open').click(function(){
+			$('#mymenu').trigger("open.mm");
+		});
+		$('#close').click(function(){
+			$('#mymenu').trigger("close.mm");
+		});
+
+	});
+</script>
+</body>
+</html>
